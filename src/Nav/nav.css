@@ -18,6 +18,11 @@ body {
     background-color: black;
 }
 
+h2 {
+    color: white;
+    padding: 1rem;
+}
+
 .nav-logo {
     margin-left: 1rem;
     color: white;

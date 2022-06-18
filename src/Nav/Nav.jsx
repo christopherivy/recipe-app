@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import '../Nav/nav.css';
 
-
-
-
 const Nav = () => {
 	return (
 		<div className="nav-parent" >

@@ -22,7 +22,6 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 		);
 		const data = await response.json();
 		setRecipes(data);
-		console.log(data);
 	};
 
 	const updateSearch = (e) => {
@@ -48,13 +47,11 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 			<div className="recipes" >
 				{ recipes.map((recipe) => (
 					<Recipe
-						key={ recipe.id }
+						id={ recipe.id }
 						title={ recipe.title }
 						totalIngredients={ recipe.missedIngredientCount }
 						image={ recipe.image }
 						ingredients={ recipe.missedIngredients }
-						id={ recipe.id }
-
 					/>
 				)) }
 			</div>

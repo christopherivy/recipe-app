@@ -10,6 +10,12 @@ h1 {
     color: white;
 }
 
+body {
+    background-image: url(./assets/background.jpeg);
+    background-size: cover;
+    width: 100%;
+}
+
 
 /* cdi styles start */
 

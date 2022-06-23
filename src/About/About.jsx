@@ -1,8 +1,9 @@
 import React from 'react';
+import './about.css';
 
 const About = () => {
 	return (
-		<div>
+		<div className="aboutDiv" >
 			<h1>I'm the about page</h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis omnis, doloribus repudiandae nam harum temporibus a rerum atque dolores quibusdam numquam impedit. Quod sapiente delectus sit aperiam facere quidem ducimus.
 			Quisquam iste fugit illum at quae hic pariatur rem mollitia voluptatibus temporibus tenetur cum sit, culpa eius excepturi doloribus laboriosam nulla ipsa natus voluptatem. Illo, molestias! Possimus in optio mollitia?

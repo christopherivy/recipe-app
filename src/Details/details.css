@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    background-color: black;
+}
+
+.imageDiv {
+    background-color: white;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.image {
+    border-radius: 10%;
+}
+
+h1,
+h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+.summary {
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.summaryH2 {
+    color: black;
+}
+
+.summary a {
+    color: black;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.instructions {
+    color: black;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.instructionsH2 {
+    color: black;
+}
+
+.recipe {
+    background-color: white;
+    height: 100%;
+}
+
+.titleH1,
+.titleH2 {
+    color: black;
+}

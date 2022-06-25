@@ -14,6 +14,7 @@ import Details from './Details/Details';
 
 
 
+
 /* 
 random ppl api
 // api key BV7Z-8AEA-Q23U-E903
@@ -33,6 +34,7 @@ const App = () => {
 					<Route path='/details/:id' element={ <Details /> } />
 					<Route path='/about' element={ <About /> } />
 				</Routes>
+
 			</div>
 		</Router >
 	);

@@ -7,5 +7,35 @@ h1 {
     padding-top: 2rem;
     margin: auto;
     width: 50%;
-    color: white
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.search-form {
+    min-height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 50%;
+    border: none;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.search-button {
+    margin-top: 15px;
+    background: #1693d2;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.recipes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

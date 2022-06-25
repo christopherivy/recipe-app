@@ -10,11 +10,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    height: 50px;
 }
 
 h2 {
     color: white;
     padding: 1rem;
+    font-size: 20px;
 }
 
 .nav-logo {
@@ -41,5 +43,5 @@ a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 15px;
 }

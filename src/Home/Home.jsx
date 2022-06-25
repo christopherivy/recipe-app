@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'reactstrap';
 import Recipe from '../Recipe';
 import './home.css';
+
 
 
 const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
@@ -43,9 +45,8 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 				<button className="search-button btn btn-primary"  >Search</button>
 			</form>
 
-
 			<div className="recipes" >
-				{ recipes.map((recipe) => (
+				{ recipes && recipes.map((recipe) => (
 					<Recipe
 						id={ recipe.id }
 						title={ recipe.title }

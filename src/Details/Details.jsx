@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import parse from "html-react-parser";
 import Recipe from '../Recipe';
+import Ingredient from '../Ingredient/Ingredient';
 import './details.css';
 
 
@@ -15,6 +16,9 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 		getRecipe();
 	}, [ id ]);
 
+	// useEffect(() => {
+	// 	getRecipe();
+	// }, []);
 
 	const getRecipe = async () => {
 		const response = await fetch(
@@ -24,9 +28,6 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 		setRecipe(data);
 		console.log(data);
 	};
-
-	// "Corn on the Cob in Cilantro and Lime Butter might be just the side dish you are searching for. For <b>$1.2 per serving</b>, this recipe <b>covers 6%</b> of your daily requirements of vitamins and minerals. One serving contains <b>348 calories</b>, <b>3g of protein</b>, and <b>32g of fat</b>. This recipe from Foodista has 1 fans. If you have lime, cilantro, corn on the cob, and a few other ingredients on hand, you can make it. It is a good option if you're following a <b>gluten free and vegetarian</b> diet. From preparation to the plate, this recipe takes approximately <b>30 minutes</b>. This recipe is typical of American cuisine. All things considered, we decided this recipe <b>deserves a spoonacular score of 20%</b>. This score is rather bad.  Try<a href="https://spoonacular.com/recipes/corn-with-cilantro-lime-butter-366161">Corn with Cilantro-Lime Butter</a>, <a href="https://spoonacular.com/recipes/corn-on-the-cob-with-cilantro-lime-butter-141240">Corn on the Cob with Cilantro-Lime Butter</a>, and <a href="https://spoonacular.com/recipes/grilled-corn-with-cilantro-lime-butter-550264">Grilled Corn with Cilantro Lime Butter</a> for similar recipes."
-
 
 
 
@@ -41,15 +42,53 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 					<img className="image" src={ recipe.image } alt="recipe image" />
 				</div>
 
+
+				{/* ============== SUMMARY SECTION  ============== */ }
 				<div className="summary" >
-					<h2 className="summaryH2" >Summary</h2>
+					<h2 className="titleH2" >Summary</h2>
 					<p dangerouslySetInnerHTML={ { __html: recipe.summary } } /> {/* CHAT WITH PETER ABOUT THIS LINE */ }
 				</div>
 
+
+
+
+				{/* ============== INSTRUCTION SECTION  ============== */ }
+				<div>
+					<div className="ingredients">
+						<h2 className="titleH2" >Ingredients</h2>
+						<div >
+							{ recipe && recipe.extendedIngredients && recipe.extendedIngredients.map((ingredient) => (
+								<p className="ingredient"	> { ingredient.amount }  { ingredient.nameClean } </p	>
+							)) }
+						</div>
+					</div>
+				</div>
+
+				{/* ============== INSTRUCTION SECTION  ============== */ }
 				<div className="instructions">
-					<h2 className="instructionsH2" >Instructions</h2>
+					<h2 className="titleH2" >Instructions</h2>
 					<p dangerouslySetInnerHTML={ { __html: recipe.instructions } } /> {/* CHAT WITH PETER ABOUT THIS LINE */ }
 				</div>
+
+
+
+				{/* <div > ============== not sure why these rows and headers not working
+					<table className="extras">
+						<tr>
+							<td>Gluten Free</td>
+							<td>{ recipe.glutenFree } why not working</td> 
+						</tr>
+						<tr>
+							<td>Vegan</td>
+							<td>{ recipe.vegan }</td>
+						</tr>
+						<tr>
+							<td>Very Healthy</td>
+							<td>{ recipe.title }</td> 
+						</tr>
+
+					</table>
+				</div> */}
 
 
 
@@ -63,10 +102,9 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 export default Details;
 
 /* TODO
-1. need to implement navigate feature to go back and fwd.
-2. need to loop over
+1. need to implement useNavigate feature to go back and fwd.
 3. best way to stop hitting the api
-4.
+4. go over classname extras with on demand mentor not pulling the correct api data but is pulling other info not needed
 
 
 */

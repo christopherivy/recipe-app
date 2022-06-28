@@ -4,20 +4,27 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Recipe = ({ title, image, totalIngredients, ingredients, id }) => {
 	return (
+		<div className="card-div" >
+			<div className="image-container">
+				<img className="img" src={ image } />
+				<p>Recipe info here</p>
+			</div>
+			<div className="summary-div" >
+				<div className="card-title" >
+					<h2>
+						<Link to={ `/details/${id}` } > { title } </Link>
+					</h2>
 
-		<div className={ style.recipe }>
-			<h2>
-				<Link className={ style.title } to={ `/details/${id}` } > { title } </Link>
-			</h2>
-			{/* <h2 className="recipe-title" > { title } </h2	> */ }
-			<p>Total Ingredients:{ totalIngredients }</p>
-			<ol>
-				{ ingredients.map(ingredient => (
-					<li>{ ingredient.name }</li>
-				)) }
-			</ol>
-			<img className={ style.image } src={ image } alt="" />
+				</div>
+				<div className="card-body" >
+					<p>
+						Total Ingredients:{ totalIngredients }
+					</p>
+				</div>
+			</div>
 		</div>
+
+
 	);
 };
 

@@ -7,7 +7,7 @@ import './home.css';
 
 const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 	const API_KEY = "58095dd45f9b42eca54a4198b72081bd";
-	let url = "https://api.spoonacular.com/recipes/findByIngredients";
+	// let url = "https://api.spoonacular.com/recipes/findByIngredients";
 	let numItems = 10;
 
 	const [ recipes, setRecipes ] = useState([]);
@@ -28,6 +28,7 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 
 	const updateSearch = (e) => {
 		setSearch(e.target.value);
+
 	};
 
 	const getSearch = e => {

@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import '../Nav/nav.css';
 
 const Nav = () => {
 	return (
 		<div className="nav-parent" >
 			<div className="nav-logo">
-				<h2  >Epicer-Recipe</h2>
+				<h2  >Epic Recipes</h2>
 			</div>
 			<nav className="nav-items">
 				<ul className="nav-ul">
@@ -20,7 +20,6 @@ const Nav = () => {
 			</nav>
 		</div>
 	);
-
 };
 
 export default Nav;

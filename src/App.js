@@ -11,6 +11,8 @@ import Nav from './Nav/Nav';
 import About from '../src/About/About';
 import Home from '../src/Home/Home';
 import Details from './Details/Details';
+import CardTest from './CardTest/CardTest';
+import '../src/CardTest/CardTest';
 
 
 
@@ -34,6 +36,13 @@ const App = () => {
 					<Route path='/details/:id' element={ <Details /> } />
 					<Route path='/about' element={ <About /> } />
 				</Routes>
+				<div className="card-container"  >
+					<CardTest />
+					<CardTest />
+					<CardTest />
+					<CardTest />
+
+				</div>
 
 			</div>
 		</Router >

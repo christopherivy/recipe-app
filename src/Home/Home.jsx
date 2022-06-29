@@ -20,10 +20,11 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 
 	const getRecipes = async () => {
 		const response = await fetch(
-			`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${query}&number=${numItems}&apiKey=${API_KEY}`
+			`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${query}&sort=max_used_ingredients&number=${numItems}&apiKey=${API_KEY}`
 		);
 		const data = await response.json();
 		setRecipes(data);
+		console.log(data);
 	};
 
 	const updateSearch = (e) => {
@@ -40,9 +41,9 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 
 	return (
 		<div>
-			<h1>Enter a food item below to get amazing recipes!!</h1> {/* this will be a nav component */ }
+			<h1>Enter food items below to get amazing recipes!!</h1> {/* this will be a nav component */ }
 			<form className="search-form" onSubmit={ getSearch } >
-				<input className="search-bar" type="text" placeholder="Enter a food item here" value={ search } onChange={ updateSearch } />
+				<input className="search-bar" type="text" placeholder="Enter food items here (ex. chicken, rice, beans)" value={ search } onChange={ updateSearch } />
 				<button className="search-button btn btn-primary"  >Search</button>
 			</form>
 
@@ -51,9 +52,12 @@ const RecipeDetails = ({ title, image, totalIngredients, ingredients }) => {
 					<Recipe
 						id={ recipe.id }
 						title={ recipe.title }
-						totalIngredients={ recipe.missedIngredientCount }
 						image={ recipe.image }
-						ingredients={ recipe.missedIngredients }
+						likes={ recipe.likes }
+						usedIngredientCount={ recipe.usedIngredientCount }
+						usedIngredients={ recipe.usedIngredients }
+						missedIngredientCount={ recipe.missedIngredientCount }
+						missedIngredients={ recipe.missedIngredients }
 					/>
 				)) }
 			</div>

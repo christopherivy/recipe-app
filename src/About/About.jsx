@@ -4,11 +4,11 @@ import './about.css';
 const About = () => {
 	return (
 		<div className="aboutDiv" >
-			<h1>I'm the about page</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis omnis, doloribus repudiandae nam harum temporibus a rerum atque dolores quibusdam numquam impedit. Quod sapiente delectus sit aperiam facere quidem ducimus.
-			Quisquam iste fugit illum at quae hic pariatur rem mollitia voluptatibus temporibus tenetur cum sit, culpa eius excepturi doloribus laboriosam nulla ipsa natus voluptatem. Illo, molestias! Possimus in optio mollitia?
-			Nisi accusamus dolor voluptatibus! Consectetur nostrum esse cum error cupiditate soluta exercitationem, id cumque nobis reiciendis recusandae a suscipit iure ratione nulla, fugiat sunt provident, facilis magnam? Dolorum, obcaecati omnis?
-			Quos corrupti doloremque pariatur velit fugiat nam mollitia, ad tenetur maxime hic quam, odio ducimus. Ea, nam quas enim culpa magni quasi commodi harum impedit officiis, tempora fugiat, vero ducimus.</p>
+			<h1>About Epic Recipes</h1>
+			<p>Not sure what recipe you can make with your current list of ingredients?
+			Epic Recipes has your solution. This application allows you to enter the ingredients you currently
+			have in your kitchen and shows you recipes you can make with those. You may need more items
+			but you will be off to a great start with Epic Recipes</p>
 		</div>
 	);
 };

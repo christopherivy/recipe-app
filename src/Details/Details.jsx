@@ -53,12 +53,13 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 
 
 				{/* ============== INSTRUCTION SECTION  ============== */ }
-				<div>
+				<div className="new">
+
 					<div className="ingredients">
 						<h2 className="titleH2" >Ingredients</h2>
 						<div >
 							{ recipe && recipe.extendedIngredients && recipe.extendedIngredients.map((ingredient) => (
-								<p className="ingredient"	> { ingredient.amount }  { ingredient.nameClean } </p	>
+								<p className="ingredient">   { ingredient.original } </p	>
 							)) }
 						</div>
 					</div>

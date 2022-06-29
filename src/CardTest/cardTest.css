@@ -1,9 +1,10 @@
 .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 1rem;
+    margin-top: 10px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border-radius: 1rem;
 }
 
 .card-div {
@@ -23,7 +24,7 @@
 .image-container,
 img {
     height: 200px;
-    border-radius: 20%;
+    border-radius: 1rem;
     margin: 4px;
 }
 

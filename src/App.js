@@ -37,11 +37,6 @@ const App = () => {
 					<Route path='/about' element={ <About /> } />
 				</Routes>
 				<div className="card-container"  >
-					<CardTest />
-					<CardTest />
-					<CardTest />
-					<CardTest />
-
 				</div>
 
 			</div>

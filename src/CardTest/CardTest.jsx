@@ -10,9 +10,7 @@ const CardTest = () => {
 			</div>
 			<div className="summary-div" >
 				<div className="card-title" >
-					<h2>
-						Title
-				</h2>
+					<h2>Title</h2>
 
 				</div>
 				<div className="card-body" >

@@ -5,3 +5,7 @@
     justify-content: center;
     text-align: center;
 }
+
+.aboutDiv h1 {
+    color: black;
+}

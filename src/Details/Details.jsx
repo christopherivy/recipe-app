@@ -16,9 +16,6 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 		getRecipe();
 	}, [ id ]);
 
-	// useEffect(() => {
-	// 	getRecipe();
-	// }, []);
 
 	const getRecipe = async () => {
 		const response = await fetch(
@@ -35,8 +32,8 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 		<div>
 			<div className="recipe" >
 				<h1 className="titleH1" >{ recipe.title }</h1>
-				<h3 className="titleH2" >Ready in { recipe.readyInMinutes } minutes <br />
-				Serving size: { recipe.servings } </h3>
+				<h2 className="titleH2" >Ready in { recipe.readyInMinutes } minutes <br />
+				Serving size: { recipe.servings } </h2>
 
 				<div className="imageDiv" >
 					<img className="image" src={ recipe.image } alt="recipe image" />
@@ -52,8 +49,9 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 
 
 
-				{/* ============== INSTRUCTION SECTION  ============== */ }
-				<div className="new">
+				{/* ============== INGREDIENT SECTION  ============== */ }
+				{/* numlist the items */ }
+				<div className="ingredient-div">
 
 					<div className="ingredients">
 						<h2 className="titleH2" >Ingredients</h2>
@@ -70,28 +68,6 @@ const Details = ({ title, image, readyInMinutes, servings, extendedIngredients, 
 					<h2 className="titleH2" >Instructions</h2>
 					<p dangerouslySetInnerHTML={ { __html: recipe.instructions } } /> {/* CHAT WITH PETER ABOUT THIS LINE */ }
 				</div>
-
-
-
-				{/* <div > ============== not sure why these rows and headers not working
-					<table className="extras">
-						<tr>
-							<td>Gluten Free</td>
-							<td>{ recipe.glutenFree } why not working</td> 
-						</tr>
-						<tr>
-							<td>Vegan</td>
-							<td>{ recipe.vegan }</td>
-						</tr>
-						<tr>
-							<td>Very Healthy</td>
-							<td>{ recipe.title }</td> 
-						</tr>
-
-					</table>
-				</div> */}
-
-
 
 
 

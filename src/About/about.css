@@ -1,11 +1,13 @@
 .aboutDiv {
     background-color: white;
-    width: 33%;
+    width: 50%;
     margin: auto;
     justify-content: center;
     text-align: center;
+    font-size: 20px;
 }
 
 .aboutDiv h1 {
     color: black;
+    margin-bottom: 2rem;
 }

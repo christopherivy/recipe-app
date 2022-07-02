@@ -36,8 +36,8 @@ body {
     padding: 1rem;
     text-align: center;
     justify-content: center;
-    width: 50%;
-    font-size: 15px;
+    width: 60%;
+    font-size: 18px;
     margin: auto;
 }
 
@@ -48,13 +48,13 @@ body {
 .summary a {
     color: black;
     text-decoration: underline;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .instructions {
     color: black;
     margin: auto;
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     text-align: left;
     justify-content: center;
@@ -66,18 +66,25 @@ body {
     color: black;
 }
 
-.ingredients {
+
+/* .ingredients {
     text-align: center;
     justify-content: center;
     font-size: 18px;
     padding: 1rem;
     width: 100%;
     margin: auto;
-}
+} */
 
 .ingredient {
     text-align: left;
     justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+.ingredient-div {
+    padding: 3rem;
 }
 
 .recipe {
